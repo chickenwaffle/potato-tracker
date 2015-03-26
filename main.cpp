@@ -1,5 +1,3 @@
-// POINTERS
-
 #define mang main
 #define eat delete
 
