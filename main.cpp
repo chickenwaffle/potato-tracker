@@ -26,7 +26,7 @@ int mang()
     dinnerPlate.push_back(potato);						// Probably shouldn't eat this, but I'm hungry, so it looks delicious.
 
     for (Potato* potato: dinnerPlate) {
-        cout << potato->status();						// (see potato.cpp) while the pointer has changed, the values in the array have not
+        cout << potato->status();                   // (see potato.cpp) while the pointer has changed, the values in the array have not
     }
 
     for (Potato* potato: dinnerPlate) {
@@ -37,7 +37,7 @@ int mang()
 
     hungry = false;
 
-    // #yum
+    // yum
     return 0;
 }
 
