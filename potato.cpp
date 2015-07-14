@@ -11,3 +11,7 @@ std::string Potato::toString() {
             + "\nHeat Intensity:\t" + to_string(heatIntensity) + "\nHot?\t\t" + ((hot)?"yes":"no") + "\n\n";
     return s;
 }
+
+Potato* getByID(int id) {
+    return Potato::potatoes.at(id);
+}

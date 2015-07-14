@@ -16,29 +16,45 @@ public:
     static std::vector<Potato*> potatoes;
 
     Potato():
-        name("JimBob"),
-        height(20), width(20),
-        x(50), y(50),
-        heatIntensity(9001),
-        hot(true) {
+        name("JimBob")
+    {
         id = ++nextID;
+        height = rand()%20+1;
+        width = rand()%20+1;
+        x = rand()%100+1;
+        y = rand()%100+1;
+        heatIntensity = rand()%300+1;
+        hot = (heatIntensity > 100) ? true : false;
     }
 
-    Potato(std::string _name,
+    Potato(std::string _name):
+        name(_name)
+    {
+        id = ++nextID;
+        height = rand()%20+1;
+        width = rand()%20+1;
+        x = rand()%100+1;
+        y = rand()%100+1;
+        heatIntensity = rand()%300+1;
+        hot = (heatIntensity > 100) ? true : false;
+    }
+
+    Potato (std::string _name,
            int _height, int _width,
            float _x, float _y,
-           int _heatIntensity,
-           bool _hot
-           ):
+           int _heatIntensity):
         name(_name),
         height(_height), width(_width),
         x(_x), y(_y),
-        heatIntensity(_heatIntensity),
-        hot(_hot) {
+        heatIntensity(_heatIntensity)
+    {
         id = ++nextID;
+        hot = (_heatIntensity > 100) ? true : false;
     }
 
     std::string toString();
+
+    Potato getByID(int id);
 };
 
 #endif // POTATO_H
